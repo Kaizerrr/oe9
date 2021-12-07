@@ -11,15 +11,11 @@
         $address = $_POST['address']; 
         $id = $_GET['id'];
       
-
         $pass = $_POST['pass'];
         $query = "UPDATE users_tbl SET first_name ='$firstname', last_name ='$lastname', birthdate = '$birthdate', email='$email', address =' $address', pass='$pass' WHERE id=$id ";
 
         $result = $con->query($query);
-
-       
-        
-      
+     
         if($result == TRUE){ 
             echo "<script> alert('Record successfully updated...') </script>";
             
@@ -28,7 +24,6 @@
             echo "<script> alert('Error updating...') </script>".$con->error;
         }
     }
-
         
     if(isset($_GET['id'])){
         $id = $_GET['id']; 
@@ -77,7 +72,6 @@
         </div>
     </body>
 </html>
-
 
 <?php
 
